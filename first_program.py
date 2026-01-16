@@ -112,12 +112,77 @@
 # print("Сумма квадратов", a, "и", b, "равена", m)
 # ---
 # программа, которая сравнивает пароль и его подтверждение
-print("Введите пароль")
-password = input()
-print("Повторите пароль")
-replay = input()
+# print("Введите пароль")
+# password = input()
+# print("Повторите пароль")
+# replay = input()
 
-if password == replay:
-    print("Пароль принят")
-else:
-    print("Пароль не принят")
+# if password == replay:
+#     print("Пароль принят")
+# else:
+#     print("Пароль не принят")
+# ---
+# четное или нечетное
+# print("Введите число")
+# n = int(input())
+
+# if n % 2 == 0:
+#     print("Четное")
+# else:
+#     print("Нечетное")
+# ---
+# проверка возраста
+# print("Введите свой возраст")
+# n = int(input())
+
+# if n >= 18:
+#     print("Доступ разрешен")
+# else:
+#     print("Доступ запрещен")
+# ---
+# наименьшее из двух чисел
+# print("Первое число")
+# a = int(input())
+# print("Второе число")
+# b = int(input())
+
+# if a > b:
+#     min = b
+#     print(min)
+# else:
+#     print(a)
+# ---
+# программf, которая проверяет, что для заданного четырехзначного числа выполняется следующее соотношение:
+# сумма первой и последней цифр равна разности второй и третьей цифр
+# print("Число")
+# n = int(input())
+
+# digit4 = n % 10
+# digit3 = (n % 100) // 10
+# digit2 = (n % 1000) // 100
+# digit1 = n // 1000
+
+# if digit1 + digit4 == digit2 - digit3:
+#     print("ДА")
+# else:
+#     print("НЕТ")
+# ---
+# наименьшее из четырех чисел
+print("Первое число")
+a = int(input())
+print("Второе число")
+b = int(input())
+print("Третье число")
+c = int(input())
+print("Четвертое число")
+d = int(input())
+
+min = a
+if b < min:
+    min = b
+if c < min:
+    min = c
+if d < min:
+    min = d
+
+print(min)
