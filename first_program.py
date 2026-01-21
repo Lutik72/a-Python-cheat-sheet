@@ -168,21 +168,38 @@
 #     print("НЕТ")
 # ---
 # наименьшее из четырех чисел
-print("Первое число")
-a = int(input())
-print("Второе число")
-b = int(input())
-print("Третье число")
-c = int(input())
-print("Четвертое число")
-d = int(input())
+# print("Первое число")
+# a = int(input())
+# print("Второе число")
+# b = int(input())
+# print("Третье число")
+# c = int(input())
+# print("Четвертое число")
+# d = int(input())
 
-min = a
-if b < min:
-    min = b
-if c < min:
-    min = c
-if d < min:
-    min = d
+# min = a
+# if b < min:
+#     min = b
+# if c < min:
+#     min = c
+# if d < min:
+#     min = d
 
-print(min)
+# print(min)
+# ---
+# Самописный калькулятор
+a, b, c = int(input()), int(input()), input()
+
+if c == '+':
+    print(a + b)
+elif c == '-':
+    print(a - b)
+elif c == '*':
+    print(a * b)
+elif c == '/':
+    if b == 0:
+        print("На ноль делить нельзя!")
+    else:
+        print(a / b)
+else:
+    print("Неверная операция")
