@@ -4,5 +4,5 @@ from myfirstsite import views
 
 urlpatterns = [
     # Основные маршруты
-    path('index/', views.simple_page, name='index'),  # Простая страница
+    path('', views.simple_page, name='index'),  # Простая страница
 ]
