@@ -821,3 +821,53 @@ INSTALLED_APPS = [
     'myapp',  # наше приложение
 ]
 ```
+## Представление, файл `views.py`
+Обычно представления размещают в файле views.py внутри вашего Django-приложения.
+
+*Пример:*
+```python
+from django.http import HttpResponse 
+# импортирует класс HttpResponse. Это "коробка", в которую мы кладем то, что хотим отправить пользователю (текст, HTML-код и т.д.)
+
+def simple_view(request): 
+    # создаем функцию с именем simple_view
+    # request — это параметр, который содержит информацию о запросе пользователя
+    text_content = "Привет, мир!"
+    # Мы должны вернуть объект HttpResponse
+    return HttpResponse(text_content)
+    # return HttpResponse(text_content) — отправляем этот текст пользователю
+```
+## Маршрутизация, файл `urls.py`
+Основным файлом для настройки маршрутов на уровне проекта является `urls.py`
+
+Когда вы создаете новый проект Django, файл urls.py уже содержит некоторый код:
+```python
+# (пример)
+from django.contrib import admin
+from django.urls import path
+from . import views # импортировать модуль views.py нужно из нашего приложения, заменить точку
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('about/', views.about_page, name='about')
+]
+```
+- `urlpatterns`: Это список Python, который Django просматривает для поиска совпадений с запрошенным URL.
+- `path()`: Функция, используемая для определения одного маршрута URL.
+
+### Функция path() 
+Используется для определения шаблонов URL и сопоставления их с функциями-представлениями. 
+
+**Синтаксис**: path(route, view, name=None).<br>
+Параметры:
+- route (обязательный) - это сам URL-адрес.
+```python
+path('about/', ...)  # когда пользователь зайдет на сайт/about/
+path('', ...)        # пустая строка = главная страница
+```
+- view (обязательный) - функция, которая будет вызвана.
+```python
+path('', views.home_page)  # вызовется функция home_page
+path('about/', views.about)  # вызовется функция about
+```
+- name — необязательное имя для шаблона URL.
