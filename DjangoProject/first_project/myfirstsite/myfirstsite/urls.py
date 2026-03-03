@@ -5,5 +5,5 @@ urlpatterns = [
     # Основные маршруты
     path('', views.index_page, name='index'),
     path('about/', views.about_page, name='about'),  # страница /about/
-    path('app/', include('LutikApp.urls')),
+    path('app/', include('App.urls')),
 ]
