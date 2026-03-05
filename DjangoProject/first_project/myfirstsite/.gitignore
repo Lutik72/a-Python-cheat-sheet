@@ -47,7 +47,6 @@ desktop.ini
 
 # Статические и медиа файлы (пользовательские загрузки)
 /media/
-/static/
 /staticfiles/
 /static_root/
 
