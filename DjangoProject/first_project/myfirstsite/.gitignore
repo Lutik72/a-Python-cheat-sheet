@@ -8,7 +8,7 @@ db.sqlite3
 *.sql
 
 # Python кэш и байткод
-__init__/
+__init__.py
 __pycache__/
 .pytest_cache/
 
