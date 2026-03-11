@@ -11,13 +11,16 @@
 <body>
     <header>
         <div class="container">
-            <h1>☕ Наше меню</h1>
-            <p class="subtitle">Вдохновение в каждой чашке</p>
+            {% include 'includes/header.html' %}
         </div>
     </header>
 
     <div class="container">
-        {% include 'includes/nav.html' %}
+        <nav>
+            <a href="/">Главная</a>
+            <a href="">Меню</a>
+            <a href="coworking/">Коворкинг-зона</a>
+        </nav>
 
         <!-- Кофе -->
         <section class="menu-section">

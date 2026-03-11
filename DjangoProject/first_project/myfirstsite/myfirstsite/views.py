@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 import random
 
@@ -6,6 +5,7 @@ import random
 def index_page(request):
     template = "myfirstsite/index.html"
     title = "Уютная кофейня"
+    header1 = "☕ Уютная кофейня"
     subtitle = [
         "Добро пожаловать туда, где пахнет счастьем и корицей.",
         "Кофе — это маленькое удовольствие в большой чашке.",
@@ -30,5 +30,6 @@ def index_page(request):
     context = {
         "title": title,
         "subtitle": random_quote,
+        "header1" : header1,
     }
     return render(request, template, context)

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'coworking/css/style.css' %}">
+
+    <title>{{ title }} | Коворкинг-зона</title>
+</head>
+
+<body>
+    <header>
+        {% include 'includes/header.html' %}
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/about">Меню</a>
+            <a href="">Коворкинг-зона</a>
+        </nav>
+
+        <!-- Основной блок о коворкинг-зоне -->
+
+        <div class="coworking-description">
+            <div class="description-text">
+                <h3>Идеальное место для работы</h3>
+                <p>В нашей кофейне мы создали специальную зону для тех, кто ценит комфорт и продуктивность. Светлое
+                    помещение, удобная мебель и атмосфера творчества помогут вам сосредоточиться на важных задачах.</p>
+                <p>А если захочется отдохнуть — вас всегда ждет ароматный кофе и свежая выпечка.</p>
+            </div>
+            <div class="description-image">
+                <img src="{% static 'coworking/img/cowork_img.jpg' %}" alt="Коворкинг зона">
+            </div>
+        </div>
+
+        <!-- Преимущества коворкинга -->
+        <div class="coworking-features">
+            <h3>Вам понравится у нас</h3>
+
+            <div class="features-grid">
+                <div class="coworking-card">
+                    <div class="feature-icon">💺</div>
+                    <h4>Удобные рабочие места</h4>
+                    <p>Эргономичные кресла и просторные столы с розетками</p>
+                </div>
+
+                <div class="coworking-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Быстрый Wi-Fi</h4>
+                    <p>Стабильное соединение для видеозвонков и работы</p>
+                </div>
+
+                <div class="coworking-card">
+                    <div class="feature-icon">☕</div>
+                    <h4>Кофе включен</h4>
+                    <p>Безлимитный напиток дня для всех гостей коворкинга</p>
+                </div>
+
+                <div class="coworking-card">
+                    <div class="feature-icon">🔌</div>
+                    <h4>Зарядные станции</h4>
+                    <p>Множество розеток и USB-портов у каждого стола</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Тарифы (очень простые) -->
+        <div class="tariffs">
+            <div class="tariff-card">
+                <h4>Час</h4>
+                <div class="price">250 ₽</div>
+                <p>Классический кофе бесплатно</p>
+            </div>
+
+            <div class="tariff-card">
+                <h4>День</h4>
+                <div class="price">600 ₽</div>
+                <p>Безлимитный кофе + десерт</p>
+            </div>
+
+            <div class="tariff-card">
+                <h4>Абонемент</h4>
+                <div class="price">2500 ₽</div>
+                <p>5 полных дней, кофе и десерт каждый день</p>
+            </div>
+        </div>
+
+        <!-- Бронирование -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="#" class="btn">Забронировать место</a>
+            <p style="color: #b1947a; margin-top: 20px;">По телефону: +7 (123) 456-78-90</p>
+        </div>
+    </div>
+
+    <footer>
+        {% include 'includes/footer.html' %}
+    </footer>
+</body>
+
+</html>
