@@ -69,22 +69,17 @@
 
         <!-- Тарифы (очень простые) -->
         <div class="tariffs">
-            <div class="tariff-card">
-                <h4>Час</h4>
-                <div class="price">250 ₽</div>
-                <p>Классический кофе бесплатно</p>
-            </div>
-
-            <div class="tariff-card">
-                <h4>День</h4>
-                <div class="price">600 ₽</div>
-                <p>Безлимитный кофе + десерт</p>
-            </div>
-
-            <div class="tariff-card">
-                <h4>Абонемент</h4>
-                <div class="price">2500 ₽</div>
-                <p>5 полных дней, кофе и десерт каждый день</p>
+            <h2>Тарифы</h2>
+            <div class="tariffs-container">
+                {% for tariff in tariffs %}
+                <div class="tariff-card">
+                    <h4>{{ tariff.name }}</h4>
+                    <div class="price">{{ tariff.price }} ₽</div>
+                    <p>{{ tariff.description }}</p>
+                </div>
+                {% empty %}
+                <p style="color: #b1947a; grid-column: 1/-1;">Тарифы скоро появятся</p>
+                {% endfor %}
             </div>
         </div>
 
