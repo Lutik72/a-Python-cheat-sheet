@@ -7,9 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #faf3e0;
-    /* Нежный кремовый */
     color: #5e4b3c;
-    /* Мягкий коричневый */
     line-height: 1.6;
 }
 
@@ -21,7 +19,6 @@ body {
 
 header {
     background-color: #ffe4e1;
-    /* Нежно-розовый */
     padding: 30px 0;
     border-radius: 0 0 30px 30px;
     box-shadow: 0 4px 15px rgba(233, 196, 176, 0.3);
@@ -31,7 +28,6 @@ header {
 h1 {
     font-size: 2.5em;
     color: #8b6b4d;
-    /* Теплый коричневый */
     margin-bottom: 10px;
     text-align: center;
     font-weight: 300;
@@ -41,13 +37,11 @@ h1 {
 .subtitle {
     text-align: center;
     color: #b1947a;
-    /* Бежевый */
     font-style: italic;
 }
 
 nav {
     background-color: #fff5ee;
-    /* Сливочный */
     padding: 15px;
     border-radius: 50px;
     margin: 20px 0;
@@ -66,13 +60,11 @@ nav a {
 
 nav a:hover {
     background-color: #ffd9d4;
-    /* Светло-персиковый */
     color: #5e4b3c;
 }
 
 .hero {
     background-color: #fff0e7;
-    /* Нежный персиковый */
     border-radius: 30px;
     padding: 60px 40px;
     margin: 40px 0;
@@ -103,7 +95,6 @@ nav a:hover {
 
 .feature-card {
     background-color: #fff9f0;
-    /* Кремовый */
     padding: 30px 20px;
     border-radius: 25px;
     text-align: center;
@@ -132,15 +123,6 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-footer {
-    background-color: #ffe4e1;
-    padding: 30px 0;
-    border-radius: 30px 30px 0 0;
-    margin-top: 60px;
-    text-align: center;
-    color: #8b6b4d;
-}
-
 .btn {
     display: inline-block;
     background-color: #ffd9d4;
@@ -158,8 +140,16 @@ footer {
     transform: scale(1.05);
 }
 
-/* Стили для страницы коворкинга */
+footer {
+    background-color: #ffe4e1;
+    padding: 30px 0;
+    border-radius: 30px 30px 0 0;
+    margin-top: 60px;
+    text-align: center;
+    color: #8b6b4d;
+}
 
+/* Стили для страницы коворкинга */
 .coworking-hero {
     background-color: #fff0e7;
     border-radius: 30px;
@@ -310,16 +300,12 @@ footer {
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
-    
-    /* Двойная рамка */
     border: 2px solid #fff9f0;
     outline: 1px solid #ecc9c0;
     outline-offset: 2px;
-    
     box-shadow: 0 8px 20px rgba(210, 180, 140, 0.2);
 }
 
-/* Узор по углам */
 .tariff-card::before {
     content: '✧';
     position: absolute;
@@ -352,15 +338,14 @@ footer {
     opacity: 0.6;
     transform: rotate(0deg) scale(1.1);
 }
-/* Для одной карточки */
+
 .tariff-card:only-child {
     width: 250px;
     margin: 0 auto;
 }
 
-/* Для двух карточек - они будут по центру */
 .tariffs-container:has(.tariff-card:nth-child(2):last-child) {
-    gap: 40px;  /* Чуть больше расстояние между двумя карточками */
+    gap: 40px;
 }
 
 .tariff-card h4 {
